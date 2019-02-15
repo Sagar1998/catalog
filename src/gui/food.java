@@ -83,15 +83,15 @@ public class food extends JFrame {
 		contentPane.add(tf3);
 		tf3.setColumns(10);
 		
-		JSpinner spinner = new JSpinner();
+		final JSpinner spinner = new JSpinner();
 		spinner.setBounds(43, 27, 34, 26);
 		contentPane.add(spinner);
 		
-		JSpinner spinner_1 = new JSpinner();
+		final JSpinner spinner_1 = new JSpinner();
 		spinner_1.setBounds(43, 82, 34, 26);
 		contentPane.add(spinner_1);
 		
-		JSpinner spinner_2 = new JSpinner();
+		final JSpinner spinner_2 = new JSpinner();
 		spinner_2.setBounds(43, 142, 34, 26);
 		contentPane.add(spinner_2);
 		
@@ -111,8 +111,8 @@ public class food extends JFrame {
 				value = (Integer)spinner.getValue();
 				value1 = (Integer)spinner_1.getValue();
 				value2 = (Integer)spinner_2.getValue();
-				if(e.getSource()==btnTotal)
-				{
+				//if(e.getSource()==btnTotal)
+				
 					int d1 = Integer.parseInt(tf1.getText());
 					int i1 = (int)d1;
 					int d2 = Integer.parseInt(tf2.getText());
@@ -149,7 +149,7 @@ public class food extends JFrame {
 					
 					String foodf=pbf+iwf+shaf;
 					tf_food.setText(foodf);
-				}
+				
 				
 			}
 		});
@@ -165,11 +165,11 @@ public class food extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+				
 					new catalog().setVisible(true);
 					
-				}
+				
 			}
 		});
 		btnBack.setBounds(6, 251, 117, 29);
@@ -179,8 +179,8 @@ public class food extends JFrame {
 		btnCheckout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnCheckout)
-				{
+				//if(e.getSource()==btnCheckout)
+				
 					String msg = tf4.getText();
 					String msg55 = tf_food.getText();
 					checkout ob = new checkout();
@@ -194,7 +194,7 @@ public class food extends JFrame {
 						ob.tf_food.setText(msg55);
 					ob.setVisible(true);
 					}
-				}
+				
 			}
 		});
 		btnCheckout.setBounds(327, 251, 117, 29);

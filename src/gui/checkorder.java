@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.Connection;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -82,14 +82,14 @@ public class checkorder extends JFrame {
 		btnCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnCheck)
-				{
+				//if(e.getSource()==btnCheck)
+				
 					try { 
 						String url ="jdbc:mysql://localhost:3306/details";
 						String uname = "root";
-						String pass = "12345678";
+						String pass = "root";
 						Connection conn = (Connection) DriverManager.getConnection(url,uname,pass);
-				        String sql = "SELECT name,phno,address1,address2,state,total,mobile,food,cloth FROM details WHERE o_id = ?";
+				        String sql = "SELECT name,phno,address1,address2,state,total,mobile,food,cloth FROM users WHERE o_id = ?";
 				        PreparedStatement pst = conn.prepareStatement(sql);
 				        pst.setString(1,tf1.getText());
 
@@ -117,7 +117,7 @@ public class checkorder extends JFrame {
 				    System.out.println("ERROR");
 
 				}
-				}
+				
 			}
 		});
 		btnCheck.setBounds(167, 24, 117, 29);

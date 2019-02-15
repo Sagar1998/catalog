@@ -7,12 +7,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.Connection;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -75,12 +76,12 @@ public class deleteuser extends JFrame {
 		btnCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnCheck)
-				{
+				//if(e.getSource()==btnCheck)
+				
 					try { 
 						String url ="jdbc:mysql://localhost:3306/details";
 						String uname = "root";
-						String pass = "12345678";
+						String pass = "root";
 						Connection conn = (Connection) DriverManager.getConnection(url,uname,pass);
 				        String sql = "SELECT phno FROM details WHERE name = ?";
 				        PreparedStatement pst = conn.prepareStatement(sql);
@@ -99,7 +100,7 @@ public class deleteuser extends JFrame {
 				    System.out.println("ERROR");
 
 				}
-				}
+				
 			}
 		});
 		btnCheck.setBounds(303, 21, 117, 29);
@@ -109,10 +110,10 @@ public class deleteuser extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+				
 					new editordelete().setVisible(true);
-				}
+				
 				
 				
 			}
@@ -123,12 +124,12 @@ public class deleteuser extends JFrame {
 		JButton btnEdit1 = new JButton("edit");
 		btnEdit1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnEdit1)
-				{
+				//if(e.getSource()==btnEdit1)
+				
 					try { 
 						String url ="jdbc:mysql://localhost:3306/details";
 						String uname = "root";
-						String pass = "12345678";
+						String pass = "root";
 						Connection conn = (Connection) DriverManager.getConnection(url,uname,pass);
 				        String sql = "DELETE from details where name=?";
 				        PreparedStatement pst = conn.prepareStatement(sql);
@@ -144,7 +145,7 @@ public class deleteuser extends JFrame {
 
 				    }
 					new editorderform().setVisible(true);
-				}
+				
 			}
 		});
 		btnEdit1.setBounds(19, 196, 117, 29);

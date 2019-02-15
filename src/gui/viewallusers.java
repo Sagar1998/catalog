@@ -7,12 +7,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.Connection;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -77,8 +78,8 @@ public class viewallusers extends JFrame {
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnNext)
-				{
+				//if(e.getSource()==btnNext)
+				
 					++i;
 			        if(i>=6)
 			        i=5;
@@ -88,7 +89,7 @@ public class viewallusers extends JFrame {
 					try {
 						String url ="jdbc:mysql://localhost:3306/login";
 						String uname = "root";
-						String pass = "12345678";
+						String pass = "root";
 						Connection conn = (Connection) DriverManager.getConnection(url,uname,pass);
 				        String sql = "SELECT username,password FROM login WHERE id = ?";
 				        PreparedStatement pst = conn.prepareStatement(sql);
@@ -107,7 +108,7 @@ public class viewallusers extends JFrame {
 				    System.out.println("ERROR");
 
 				}
-				}
+				
 			}
 		});
 		btnNext.setBounds(301, 141, 117, 29);
@@ -117,8 +118,8 @@ public class viewallusers extends JFrame {
 		btnPrevious.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnPrevious)
-				{
+				//if(e.getSource()==btnPrevious)
+				
 					
 					--i;
 			        if(i<1)
@@ -127,7 +128,7 @@ public class viewallusers extends JFrame {
 					try {
 						String url ="jdbc:mysql://localhost:3306/login";
 						String uname = "root";
-						String pass = "12345678";
+						String pass = "root";
 						Connection conn = (Connection) DriverManager.getConnection(url,uname,pass);
 				        String sql = "SELECT username,password FROM login WHERE id = ?";
 				        PreparedStatement pst = conn.prepareStatement(sql);
@@ -147,7 +148,7 @@ public class viewallusers extends JFrame {
 				    System.out.println("ERROR");
 
 				}
-				}
+				
 				
 			}
 		});
@@ -158,10 +159,10 @@ public class viewallusers extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+				
 					new admincatalog().setVisible(true);
-				}
+				
 				
 			}
 		});

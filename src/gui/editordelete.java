@@ -45,10 +45,10 @@ public class editordelete extends JFrame {
 		JButton btnEditUsers = new JButton("edit users");
 		btnEditUsers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnEditUsers)
-				{
-					new deleteuser().setVisible(true);
-				}
+				//if(e.getSource()==btnEditUsers)
+				
+					new editorderform().setVisible(true);
+				
 			}
 		});
 		btnEditUsers.setBounds(167, 102, 117, 29);
@@ -57,10 +57,10 @@ public class editordelete extends JFrame {
 		JButton btnBack = new JButton("back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+				
 					new admincatalog().setVisible(true);
-				}
+				
 			}
 		});
 		btnBack.setBounds(167, 219, 117, 29);

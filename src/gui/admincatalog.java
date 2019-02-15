@@ -51,10 +51,10 @@ public class admincatalog extends JFrame {
 		btnCheckOrders.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnCheckOrders)
-				{
+				//if(e.getSource()==btnCheckOrders)
+				
 					new checkorder().setVisible(true);
-				}
+				
 				
 			}
 		});
@@ -65,11 +65,11 @@ public class admincatalog extends JFrame {
 		btnDeleteUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnDeleteUser)
-				{
+				//if(e.getSource()==btnDeleteUser)
+				
 					new editordelete().setVisible(true);
 					
-				}
+				
 				
 			}
 		});
@@ -80,10 +80,10 @@ public class admincatalog extends JFrame {
 		btnViewAllUsers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnViewAllUsers)
-				{
+				//if(e.getSource()==btnViewAllUsers)
+				
 					new viewallusers().setVisible(true);
-				}
+				
 			}
 			
 			

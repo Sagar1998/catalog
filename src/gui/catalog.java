@@ -46,10 +46,10 @@ public class catalog extends JFrame {
 		btnNewButton.setIcon(new ImageIcon("/Users/sagarkuvar/Downloads/laptop1.png"));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnNewButton)
-				{
+				//if(e.getSource()==btnNewButton)
+				
 					new mobile().setVisible(true);
-				}
+				
 			}
 		});
 		btnNewButton.setBounds(6, 6, 203, 180);
@@ -60,11 +60,11 @@ public class catalog extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnNewButton_1)
-				{
+				//if(e.getSource()==btnNewButton_1)
+				
 					new clothing().setVisible(true);
 					
-				}
+				
 				
 				
 			}
@@ -77,10 +77,10 @@ public class catalog extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnNewButton_2)
-				{
+			//if(e.getSource()==btnNewButton_2)
+				
 					new food().setVisible(true);
-				}
+				
 			}
 		});
 		btnNewButton_2.setBounds(175, 186, 117, 86);

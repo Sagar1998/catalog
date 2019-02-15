@@ -124,10 +124,10 @@ public finalcheckout(String msg1 , String msg2 , String msg3 , String msg4) {
 		btnContinueShopping.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnContinueShopping)
-				{
+				//if(e.getSource()==btnContinueShopping)
+				
 					new catalog().setVisible(true);
-				}
+				
 			}
 		});
 		btnContinueShopping.setBounds(122, 243, 158, 29);

@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.Connection;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -79,19 +79,19 @@ public class admin extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnLogin){
+				
 					try {
 				String s1 = tf1.getText();
 				String s2 = tf2.getText();
 
 					
 					
-					String url ="jdbc:mysql://localhost:3306/admin";
+					String url ="jdbc:mysql://localhost:3306/admin1";
 					String uname = "root";
-					String pass = "12345678";
+					String pass = "root";
 					Connection con = (Connection) DriverManager.getConnection(url,uname,pass);
 				Statement stmt =con.createStatement();
-				ResultSet st = stmt.executeQuery("select * from admin order by username desc");
+				ResultSet st = stmt.executeQuery("select * from admin1 order by username desc");
 				//PreparedStatement st = con.prepareStatement("select * from login username=?");
 				while(st.next())
 				{
@@ -118,7 +118,7 @@ public class admin extends JFrame {
 						
 					}
 
-					}
+					
 				
 			}
 		});

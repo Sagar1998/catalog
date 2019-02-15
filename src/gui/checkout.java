@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.Connection;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -102,9 +102,9 @@ public checkout(String msg , String msg11 , String msg22 , String msg33 , String
 				{
 					String url ="jdbc:mysql://localhost:3306/details";
 					String uname = "root";
-					String pass = "12345678";
+					String pass = "root";
 					Connection con = (Connection) DriverManager.getConnection(url,uname,pass);
-					PreparedStatement stmt=con.prepareStatement("insert into details values(?,?,?,?,?,?,?,?,?,?)");  
+					PreparedStatement stmt=con.prepareStatement("insert into users values(?,?,?,?,?,?,?,?,?,?)");  
 
 					
 					
@@ -141,10 +141,10 @@ public checkout(String msg , String msg11 , String msg22 , String msg33 , String
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+			
 					new mobile().setVisible(true);
-				}
+				
 			}
 		});
 		btnBack.setBounds(26, 243, 117, 29);

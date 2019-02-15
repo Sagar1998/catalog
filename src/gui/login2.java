@@ -8,8 +8,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.DriverManager;
 
-import com.mysql.jdbc.CallableStatement;
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.CallableStatement;
+//import com.mysql.jdbc.Connection;
 import java.awt.event.*;
 public class login2 extends Frame implements ActionListener{
 	
@@ -84,7 +84,7 @@ String s2 = tf2.getText();
 	
 	String url ="jdbc:mysql://localhost:3306/login";
 	String uname = "root";
-	String pass = "12345678";
+	String pass = "root";
 	Connection con = (Connection) DriverManager.getConnection(url,uname,pass);
 Statement stmt =con.createStatement();
 ResultSet st = stmt.executeQuery("select * from login order by username desc");

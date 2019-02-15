@@ -63,17 +63,17 @@ public class clothing extends JFrame {
 		lblAddidas.setBounds(173, 123, 61, 16);
 		contentPane.add(lblAddidas);
 		
-		JSpinner spinner = new JSpinner();
+		final JSpinner spinner = new JSpinner();
 		spinner.setBounds(64, 17, 34, 26);
 		//int value = (Integer)spinner.getValue();
 		contentPane.add(spinner);
 		
-		JSpinner spinner_1 = new JSpinner();
+		final JSpinner spinner_1 = new JSpinner();
 		spinner_1.setBounds(64, 72, 34, 26);
 		//int value1= (Integer)spinner_1.getValue();
 		contentPane.add(spinner_1);
 		
-		JSpinner spinner_2 = new JSpinner();
+		final JSpinner spinner_2 = new JSpinner();
 		spinner_2.setBounds(64, 118, 34, 26);
 		//int value2= (Integer)spinner_2.getValue();
 		contentPane.add(spinner_2);
@@ -108,10 +108,10 @@ public class clothing extends JFrame {
 		JButton btnBack = new JButton("back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnBack)
-				{
+				//if(e.getSource()==btnBack)
+				
 					new catalog().setVisible(true);
-				}
+				
 			}
 		});
 		btnBack.setBounds(24, 191, 117, 29);
@@ -130,8 +130,8 @@ public class clothing extends JFrame {
 				value = (Integer)spinner.getValue();
 				value1 = (Integer)spinner_1.getValue();
 				value2 = (Integer)spinner_2.getValue();
-				if(e.getSource()==btnTotal)
-				{
+				//if(e.getSource()==btnTotal)
+				
 					int d1 = Integer.parseInt(tf1.getText());
 					int i1 = (int)d1;
 					int d2 = Integer.parseInt(tf2.getText());
@@ -164,7 +164,7 @@ public class clothing extends JFrame {
 					
 					String clothfinal=lef+nikef+addf;
 					tf_cloth.setText(clothfinal);
-				}
+				
 			}
 		});
 		btnTotal.setBounds(161, 191, 100, 29);
@@ -173,8 +173,8 @@ public class clothing extends JFrame {
 		JButton btnCheckout = new JButton("checkout");
 		btnCheckout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnCheckout)
-				{
+				//if(e.getSource()==btnCheckout)
+				
 					String msg = tf4.getText();
 					String msg66 = tf_cloth.getText();
 					checkout ob = new checkout();
@@ -189,7 +189,7 @@ public class clothing extends JFrame {
 					ob.setVisible(true);
 					}
 					}
-			}
+			
 		});
 		btnCheckout.setBounds(308, 191, 117, 29);
 		contentPane.add(btnCheckout);

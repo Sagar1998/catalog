@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.DriverManager;
 
-import com.mysql.jdbc.CallableStatement;
-import com.mysql.jdbc.Connection;
+//import com.mysql.jdbc.CallableStatement;
+//import com.mysql.jdbc.Connection;
 public class login extends Frame implements ActionListener{
 Button b1,b2,b3;
 TextField tf1,tf2,tf3;
@@ -69,7 +69,7 @@ if(e.getSource()==b1){
 	{
 		String url ="jdbc:mysql://localhost:3306/login";
 		String uname = "root";
-		String pass = "12345678";
+		String pass = "root";
 		Connection con = (Connection) DriverManager.getConnection(url,uname,pass);
 		PreparedStatement stmt=con.prepareStatement("insert into login values(?,?,?)");  
 

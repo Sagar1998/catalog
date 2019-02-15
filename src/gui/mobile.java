@@ -108,7 +108,7 @@ public class mobile extends JFrame {
 		JButton btnBack = new JButton("BACK");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btnBack)
+				//if(e.getSource()==btnBack)
 				new catalog().setVisible(true);
 				
 			}
@@ -117,17 +117,17 @@ public class mobile extends JFrame {
 		contentPane.add(btnBack);
 		
 		
-		JSpinner spinner = new JSpinner();
+		final JSpinner spinner = new JSpinner();
 		spinner.setBounds(48, 23, 34, 26);
 		contentPane.add(spinner);
 		
 		
-		JSpinner spinner_1 = new JSpinner();
+		final JSpinner spinner_1 = new JSpinner();
 		spinner_1.setBounds(48, 87, 34, 26);
 		contentPane.add(spinner_1);
 		
 		
-		JSpinner spinner_2 = new JSpinner();
+		final JSpinner spinner_2 = new JSpinner();
 		spinner_2.setBounds(48, 155, 34, 26);
 		contentPane.add(spinner_2);
 		
@@ -148,8 +148,8 @@ public class mobile extends JFrame {
 				
 				
 				
-				if(e.getSource()==btnCheckout)
-				{
+				//if(e.getSource()==btnCheckout)
+				
 					
 					
 					String msg = tf4.getText();
@@ -174,7 +174,7 @@ public class mobile extends JFrame {
 					{
 					ob.setVisible(true);
 					}
-				}
+				
 			}
 		});
 		btnCheckout.setBounds(310, 226, 117, 29);
@@ -193,8 +193,8 @@ public class mobile extends JFrame {
 				value1 = (Integer)spinner_1.getValue();
 				value2 = (Integer)spinner_2.getValue();
 				
-				if(e.getSource()==btnNewButton_2)
-				{
+				//if(e.getSource()==btnNewButton_2)
+				
 					int d1 = Integer.parseInt(tf1.getText());
 					int i1 = (int)d1;
 					int d2 = Integer.parseInt(tf2.getText());
@@ -232,7 +232,7 @@ public class mobile extends JFrame {
 					String ssf=ipf+opf+s9f;
 					tfmob.setText(ssf);
 					
-				}
+				
 			}
 		});
 		btnNewButton_2.setBounds(160, 243, 117, 29);
